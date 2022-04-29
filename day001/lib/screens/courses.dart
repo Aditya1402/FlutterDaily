@@ -1,5 +1,6 @@
 import 'package:day001/widgets/achievements.dart';
 import 'package:day001/widgets/active_users.dart';
+import 'package:day001/widgets/bottom_nav_bar.dart';
 import 'package:day001/widgets/carousel.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class CoursePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: NavBar(),
       body: SafeArea(child: 
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +42,7 @@ class CoursePage extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 25,right: 25),
             child: Users(),
-          )
+          ),
 
           
         ],
