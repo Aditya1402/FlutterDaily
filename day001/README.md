@@ -12,5 +12,7 @@ Concepts learned:
     - TextButton
     - Align
     - Spacer
+    - BottomNavigationBar
+- Responsive Design
 
 

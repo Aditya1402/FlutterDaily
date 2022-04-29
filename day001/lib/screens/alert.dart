@@ -9,23 +9,47 @@ class AlertPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children:  
-          [
-            Align(
-              alignment: Alignment.center,
-              child: SvgPicture.asset("assets/images/illustration.svg")),
+        child: Padding(
+          padding: const EdgeInsets.all(35.0),
+          child: Column(
+            children:  
+            [
+              const SizedBox(height: 80,),
 
-            
-            const Text("Hey Luke, there's a new course for you!"),
-            const Text(
-              "Find out how our new matching tool can help you achieve your goals.",
-              textAlign: TextAlign.center),
+              Align(
+                alignment: Alignment.center,
+                child: SvgPicture.asset("assets/images/illustration.svg")),
 
-            const Button(),
+              const SizedBox(height: 25,),
+              
+              const Text("Hey Luke,\nthere's a new course for you!",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF333333),
+                fontWeight: FontWeight.w700,
+                fontSize: 24
+              ),),
 
-            const TextButton(onPressed: null, child: Text("Not now"))
-          ],
+              const SizedBox(height: 20),
+
+              const Text(
+                "Find out how our new matching tool\ncan help you achieve your goals.",
+                style: TextStyle(fontSize: 17,
+                color: Color(0xFF4F4F4F)),
+                textAlign: TextAlign.center),
+
+                const SizedBox(height: 150),
+
+              const Button(),
+
+              const TextButton(onPressed: null, child: Text("Not now",
+              style: TextStyle(fontWeight: FontWeight.w500,
+        fontSize: 17,
+        color: Color(0xFFBDBDBD)))),
+
+        
+            ],
+          ),
         ),
       ),
     );
