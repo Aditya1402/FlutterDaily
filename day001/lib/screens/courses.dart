@@ -10,32 +10,40 @@ class CoursePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(child: 
-      Padding(
-        padding: const EdgeInsets.all(35.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: 
-          const [
-            Text("Your Courses",
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: 
+         [
+           const SizedBox(height: 45,),
+           
+          const Padding(
+            padding: EdgeInsets.only(left: 25),
+            child: Text("Your Courses",
             style: TextStyle(
               color: Color(0XFF333333),
               fontSize: 24,
               fontWeight: FontWeight.w700
             ),),
+          ),
 
-            Carousel(),
+          const SizedBox(height: 20,),
 
-            SizedBox(height: 20,),
+          Carousel(),
+          
+          const Padding(
+            padding: EdgeInsets.all(25.0),
+            child: Achievements(),
+          ),
 
-            Achievements(),
+          const SizedBox(height: 20,),
 
-            SizedBox(height: 25,),
+          const Padding(
+            padding: EdgeInsets.only(left: 25,right: 25),
+            child: Users(),
+          )
 
-            Users()
-
-            
-          ],
-        ),
+          
+        ],
       )),
     );
   }

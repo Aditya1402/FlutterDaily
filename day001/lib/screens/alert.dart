@@ -10,7 +10,7 @@ class AlertPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(35.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
             children:  
             [

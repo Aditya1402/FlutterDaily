@@ -26,7 +26,7 @@ class Achievements extends StatelessWidget {
             const SizedBox(width: 11),
             LogoList(image:"assets/images/logo2.svg", color:Colors.white, width: 38,),
             const SizedBox(width: 11),
-            LogoList(image:"assets/images/logo3.svg", color:Color(0xff1FB6FF)),
+            LogoList(image:"assets/images/logo3.svg", color:const Color(0xff1FB6FF)),
             const SizedBox(width: 11),
             GestureDetector(
               onTap: (){},
@@ -34,15 +34,15 @@ class Achievements extends StatelessWidget {
               Stack(
                 children: 
                  [
-                  SvgPicture.asset("assets/images/Polygon.svg",width: 35,),
-                  Positioned(
-                    top: 12,
-                    left: 8,
+                  SvgPicture.asset("assets/images/Polygon.svg",width: 27,),
+                  const Positioned(
+                    top: 8,
+                    left: 5,
                     child: Text("+3",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
-                      fontSize: 16
+                      fontSize: 14
                     ),),
                   )
                 ],
