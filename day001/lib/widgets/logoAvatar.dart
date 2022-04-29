@@ -3,9 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class LogoList extends StatelessWidget {
   String image;
+  bool achievements;
   Color color;
   double width;
-  LogoList({required this.image, required this.color, this.width = 25});
+  LogoList({required this.image, this.color=Colors.white, this.width = 25, this.achievements=true});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,10 @@ class LogoList extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(100),
-        boxShadow: const [
+        boxShadow:  [
+          achievements?
           BoxShadow(color: Color(0xfff2f2f2), spreadRadius: 2, blurRadius: 5)
+          :BoxShadow(color: Color(0xfff2f2f2), spreadRadius: 0, blurRadius: 0)
         ],
       ),
       child: CircleAvatar(
@@ -22,11 +25,15 @@ class LogoList extends StatelessWidget {
         backgroundColor: color,
         child: Center(
           child: ClipRRect(
-            child: SvgPicture.asset(
-              image,
-              width: width,
-            ),
-          ),
+              child: achievements
+                  ? SvgPicture.asset(
+                      image,
+                      width: width,
+                    )
+                  : Image.asset(
+                      image,
+                      width: width,
+                    )),
         ),
       ),
     );

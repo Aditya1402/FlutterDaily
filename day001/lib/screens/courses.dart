@@ -1,4 +1,6 @@
 import 'package:day001/widgets/achievements.dart';
+import 'package:day001/widgets/active_users.dart';
+import 'package:day001/widgets/carousel.dart';
 import 'package:flutter/material.dart';
 
 class CoursePage extends StatelessWidget {
@@ -21,9 +23,17 @@ class CoursePage extends StatelessWidget {
               fontWeight: FontWeight.w700
             ),),
 
+            Carousel(),
+
             SizedBox(height: 20,),
 
-            Achievements()
+            Achievements(),
+
+            SizedBox(height: 25,),
+
+            Users()
+
+            
           ],
         ),
       )),
