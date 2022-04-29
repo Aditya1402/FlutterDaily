@@ -20,7 +20,7 @@ class AlertPage extends StatelessWidget {
                 alignment: Alignment.center,
                 child: SvgPicture.asset("assets/images/illustration.svg")),
 
-              const SizedBox(height: 25,),
+              const SizedBox(height: 40),
               
               const Text("Hey Luke,\nthere's a new course for you!",
               textAlign: TextAlign.center,
@@ -38,7 +38,7 @@ class AlertPage extends StatelessWidget {
                 color: Color(0xFF4F4F4F)),
                 textAlign: TextAlign.center),
 
-                const SizedBox(height: 150),
+                const SizedBox(height: 130),
 
               const Button(),
 
