@@ -1,18 +1,15 @@
-# Day 001
+# Day 01 - Basic UI Implementation
 
-Concepts learned:
-- Preference - use constants for Widget constructors
-- const VS final keywords
-- Navigation
-- Widgets 
-    - Column
-    - MaterialApp
-    - Scaffold
-    - ElevatedButton
-    - TextButton
-    - Align
-    - Spacer
-    - BottomNavigationBar
-- Responsive Design
+### Replicated UI Components 
 
+**Figma Attachment :** www.figma.com/file/gK6FDBoOxrsnUCqtEWlUs8/Flutter-Basic-UI?node-id=0%3A1
+
+**Packages Used :**
+- flutter_svg
+
+**Fonts Used :** *Larsseit*
+
+Screenshots : 
+
+<img src="./assets/images/Day 01.svg">
 
