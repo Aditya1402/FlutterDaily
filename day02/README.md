@@ -1,16 +1,15 @@
-# day02
+# Day 02 - Basic UI Implementation
 
-A new Flutter project.
+### Replicated UI Components 
 
-## Getting Started
+**Figma Attachment :** www.figma.com/file/8yapuWa1PWcsziHiD8HEGM/Furniture-Shopping-App-UI-(Community)?node-id=8%3A26
 
-This project is a starting point for a Flutter application.
+**Packages Used :**
+- flutter_svg
+- font_awesome_flutter
 
-A few resources to get you started if this is your first Flutter project:
+**Fonts Used :** *Clash Display*
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Screenshots : 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="./assets/images/Day 02.svg">
