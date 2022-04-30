@@ -14,16 +14,22 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         actions: const
         [
-          InkWell(child: Icon(
-            FontAwesomeIcons.cartShopping,
-            color: Palette.primary,
-            size: 20,),)
+          Padding(
+            padding: EdgeInsets.only(top: 25, right: 20),
+            child: InkWell(child: Icon(
+              FontAwesomeIcons.cartShopping,
+              color: Palette.primary,
+              size: 18)),
+          )
         ],
-        title: const Text("FurnitureCo.",
-        style: TextStyle(
-          color: Palette.primary,
-          fontWeight: FontWeight.w600
-        ),),
+        title:  const Padding(
+          padding: EdgeInsets.only(top: 25),
+          child: Text("FurnitureCo.",
+          style: TextStyle(
+            color: Palette.primary,
+            fontWeight: FontWeight.w600
+          ),),
+        ),
       ),
 
       body: const Padding(padding: EdgeInsets.all(10)),
