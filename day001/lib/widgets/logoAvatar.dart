@@ -12,32 +12,42 @@ class LogoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
+    return 
+    
+    // Container(
+    //   decoration: BoxDecoration(
+    //     color: Colors.white,
+    //     borderRadius: BorderRadius.circular(100),
+    //     boxShadow:  [
+    //       achievements?
+    //       const BoxShadow(color: Color(0xfff2f2f2), spreadRadius: 2, blurRadius: 5)
+    //       :BoxShadow(color: Color(0xfff2f2f2), spreadRadius: 0, blurRadius: 0)
+    //     ],
+    //   ),
+      // child: 
+      
+      PhysicalModel(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(100),
-        boxShadow:  [
-          achievements?
-          const BoxShadow(color: Color(0xfff2f2f2), spreadRadius: 2, blurRadius: 5)
-          :BoxShadow(color: Color(0xfff2f2f2), spreadRadius: 0, blurRadius: 0)
-        ],
-      ),
-      child: CircleAvatar(
-        radius: 32,
-        backgroundColor: color,
-        child: Center(
-          child: ClipRRect(
-              child: achievements
-                  ? SvgPicture.asset(
-                      image,
-                      width: width,
-                    )
-                  : Image.asset(
-                      image,
-                      width: width,
-                    )),
+        shape: BoxShape.circle,
+        elevation: 1.4,
+        shadowColor: Color(0xffBDBDBD),
+        child: CircleAvatar(
+          radius: 32,
+          backgroundColor: color,
+          child: Center(
+            child: ClipRRect(
+                child: achievements
+                    ? SvgPicture.asset(
+                        image,
+                        width: width,
+                      )
+                    : Image.asset(
+                        image,
+                        width: width,
+                      )),
+          ),
         ),
-      ),
-    );
+      );
+    
   }
 }
