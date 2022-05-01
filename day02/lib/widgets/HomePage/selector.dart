@@ -15,13 +15,13 @@ class _SelectorState extends State<Selector> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 65,
+      height: 55,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 10,
           itemBuilder: (BuildContext context, int index) {
             return Padding(
-              padding: const EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 20),
               child: InkWell(
                 onTap: () {
                   setState(() {
@@ -31,7 +31,7 @@ class _SelectorState extends State<Selector> {
                 },
                 child: Container(
                   child: const Icon(FontAwesomeIcons.diamondTurnRight),
-                  width: 64,
+                  width: 55,
                   decoration: BoxDecoration(
                       color: tempIndex==index ? Palette.secondary : Palette.primary,
                       borderRadius: BorderRadius.circular(10)),

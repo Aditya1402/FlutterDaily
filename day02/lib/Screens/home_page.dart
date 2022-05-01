@@ -26,10 +26,7 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.only(top: 25, right: 20),
             child: InkWell(child: 
             SvgPicture.asset("assets/images/cart.svg", width: 28,)
-            // Icon(
-            //   FontAwesomeIcons.cartShopping,
-            //   color: Palette.primary,
-            //   size: 18)
+            
               ),
           )
         ],
@@ -49,7 +46,7 @@ class HomePage extends StatelessWidget {
         children: const [
           SearchBar(),
 
-          SizedBox(height: 20,),
+          SizedBox(height: 30,),
 
           Selector()
         ],
