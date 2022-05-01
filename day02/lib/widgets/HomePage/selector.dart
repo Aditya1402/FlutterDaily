@@ -30,7 +30,7 @@ class _SelectorState extends State<Selector> {
                   });
                 },
                 child: Container(
-                  child: Icon(FontAwesomeIcons.diamondTurnRight),
+                  child: const Icon(FontAwesomeIcons.diamondTurnRight),
                   width: 64,
                   decoration: BoxDecoration(
                       color: tempIndex==index ? Palette.secondary : Palette.primary,
