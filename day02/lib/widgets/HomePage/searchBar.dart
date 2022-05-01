@@ -14,11 +14,11 @@ class SearchBar extends StatelessWidget {
       [
       TextField(
         cursorColor: Palette.primary,
-        textAlign: TextAlign.center,
+        textAlign: TextAlign.left,
         maxLines: 1,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.only(top: 22, bottom: 22, right: 140),
+            contentPadding: const EdgeInsets.only(top: 22, bottom: 22),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(14),
                 borderSide: const BorderSide(color: Colors.transparent)),
@@ -29,7 +29,7 @@ class SearchBar extends StatelessWidget {
             fillColor: Palette.secondary,
             hintText: "Search for furniture",
             prefixIcon:   const Padding(
-              padding: EdgeInsets.only(left: 12),
+              padding: EdgeInsets.only(left: 16, right: 25),
               child: Icon(
                 MyFlutterApp.search,
                 size: 25,

@@ -49,10 +49,7 @@ class HomePage extends StatelessWidget {
 
           SizedBox(height: 15,),
 
-          Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Selector(),
-          )
+          Selector()
         ],
       ),
     );
