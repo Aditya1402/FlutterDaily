@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:day02/palette.dart';
+import 'package:day02/widgets/HomePage/products.dart';
 import 'package:day02/widgets/HomePage/searchBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,6 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       bottomNavigationBar: NavBar(),
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -41,7 +43,7 @@ class HomePage extends StatelessWidget {
       ),
 
       body:  Column(
-        children:  const [
+        children:   [
           Padding(
             padding: EdgeInsets.all(20),
             child: SearchBar(),
@@ -49,7 +51,9 @@ class HomePage extends StatelessWidget {
 
           SizedBox(height: 15,),
 
-          Selector()
+          Selector(),
+
+          Products()
         ],
       ),
     );
