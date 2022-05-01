@@ -14,11 +14,11 @@ class SearchBar extends StatelessWidget {
       [
       TextField(
         cursorColor: Palette.primary,
-        textAlign: TextAlign.left,
+        textAlign: TextAlign.center,
         maxLines: 1,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.symmetric(vertical: 24),
+            contentPadding: const EdgeInsets.only(top: 24, bottom: 24, right: 140),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(14),
                 borderSide: const BorderSide(color: Colors.transparent)),
@@ -58,5 +58,5 @@ class SearchBar extends StatelessWidget {
       )
       ]
     );
-  }
+  } 
 }
