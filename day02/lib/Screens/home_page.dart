@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 25, right: 20),
             child: InkWell(child: 
-            SvgPicture.asset("assets/images/cart.svg", width: 28,)
+            SvgPicture.asset("assets/images/cart.svg", width: 28, color: Palette.primary,)
             
               ),
           )
@@ -40,17 +40,21 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      body:  Padding(padding: EdgeInsets.all(20),
-      child: 
-      Column(
-        children: const [
-          SearchBar(),
+      body:  Column(
+        children:  const [
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: SearchBar(),
+          ),
 
-          SizedBox(height: 30,),
+          SizedBox(height: 15,),
 
-          Selector()
+          Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Selector(),
+          )
         ],
-      )),
+      ),
     );
   }
 }

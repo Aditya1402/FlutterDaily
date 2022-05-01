@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'ClashDisplay',
-        primarySwatch: Colors.purple
+        primarySwatch: Colors.grey
       ),
       home: const HomePage(),
     );

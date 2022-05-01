@@ -18,7 +18,7 @@ class SearchBar extends StatelessWidget {
         maxLines: 1,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.only(top: 24, bottom: 24, right: 140),
+            contentPadding: const EdgeInsets.only(top: 22, bottom: 22, right: 140),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(14),
                 borderSide: const BorderSide(color: Colors.transparent)),
@@ -50,8 +50,8 @@ class SearchBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(14),
               color: Palette.primary
             ),
-            width: 68,
-            height: 68,
+            width: 63,
+            height: 63,
             child: SvgPicture.asset("assets/images/settings.svg",color: Colors.white,)
           ),
         ),

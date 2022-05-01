@@ -10,7 +10,7 @@ class NavBar extends StatelessWidget {
     return BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        iconSize: 20,
+        iconSize: 21.5,
         elevation: 0,
         unselectedItemColor: Color(0xFF999999),
         selectedItemColor: Palette.primary,
