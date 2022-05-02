@@ -20,7 +20,7 @@ class NavBar extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.bookmark), label: "Bookmarks"),
           BottomNavigationBarItem(
-              icon: Icon(FontAwesomeIcons.bell), label: "Reminder"),
+              icon: Icon(FontAwesomeIcons.ring), label: "Reminder"),
           BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.user), label: "Profile"),
         ]);

@@ -48,11 +48,11 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.all(20),
             child: SearchBar(),
           ),
-
-          SizedBox(height: 15,),
-
+      
+          SizedBox(height: 5,),
+      
           Selector(),
-
+      
           Products()
         ],
       ),
