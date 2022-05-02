@@ -5,7 +5,6 @@ import 'package:day02/widgets/HomePage/products.dart';
 import 'package:day02/widgets/HomePage/searchBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/HomePage/bottomNavBar.dart';
 import '../widgets/HomePage/selector.dart';

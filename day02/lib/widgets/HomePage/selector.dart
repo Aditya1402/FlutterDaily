@@ -12,16 +12,17 @@ class Selector extends StatefulWidget {
 
 class _SelectorState extends State<Selector> {
   int selected = 0;
-  List selectorImage = [
-    "assets/images/popular.svg",
-    "assets/images/chairs.svg",
-    "assets/images/tables.svg",
-    "assets/images/sofa.svg",
-    "assets/images/beds.svg",
-    "assets/images/chairs.svg"
+
+  List<Map> selector = 
+  [
+    {'image':"assets/images/popular.svg",'title':"Popular"},
+    {'image':"assets/images/chairs.svg",'title':"Chairs"},
+    {'image':"assets/images/tables.svg",'title':"Tables"},
+    {'image':"assets/images/sofa.svg",'title':"Sofas"},
+    {'image':"assets/images/beds.svg",'title':"Beds"},
+    {'image':"assets/images/chairs.svg",'title':"Lamps"},
   ];
 
-  List titles = ["Popular", "Chairs", "Tables", "Sofas", "Beds", "Lamps"];
 
   List<Color> color = [
     Palette.secondary,
@@ -36,9 +37,9 @@ class _SelectorState extends State<Selector> {
     return Container(
       height: 85,
       child: ListView.builder(
-          padding: EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 20),
           scrollDirection: Axis.horizontal,
-          itemCount: selectorImage.length,
+          itemCount: selector.length,
           itemBuilder: (BuildContext context, int index) {
             return Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -53,7 +54,7 @@ class _SelectorState extends State<Selector> {
                     child: Container(
                       padding: EdgeInsets.all(index != 0 ? 13 : 16.9),
                       child: SvgPicture.asset(
-                        selectorImage[index],
+                        selector[index]['image'],
                         color: selected == index ? Colors.white : Palette.grey,
                       ),
                       width: 55,
@@ -65,11 +66,11 @@ class _SelectorState extends State<Selector> {
                           borderRadius: BorderRadius.circular(13)),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 7,
                   ),
                   Text(
-                    titles[index],
+                    selector[index]['title'],
                     style: TextStyle(
                       fontWeight:
                           selected == index ? FontWeight.w500 : FontWeight.w400,

@@ -7,19 +7,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Products extends StatelessWidget {
-  List images = const [
-    "assets/images/sofa1.png",
-    "assets/images/sofa2.png",
-    "assets/images/sofa3.png",
-    "assets/images/sofa4.png",
+  List<Map> info = 
+  [
+    {'image':"assets/images/sofa1.png",'label':"Royal Palm Sofa",'price':"\$50.18"},
+    {'image':"assets/images/sofa2.png",'label':"Leatherette Sofa",'price':"\$30.99"},
+    {'image':"assets/images/sofa3.png",'label':"Modern Sofa",'price':"\$45.99"},
+    {'image':"assets/images/sofa4.png",'label':"Leatherette Sofa",'price':"\$20.99"},
   ];
 
-  List<List<String>> labels = const [
-    ["Royal Palm Sofa", "\$50.18"],
-    ["Leatherette Sofa", "\$30.99"],
-    ["Modern Sofa", "\$45.99"],
-    ["Leatherette Sofa", "\$20.99"]
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +54,7 @@ class Products extends StatelessWidget {
                             ? 53
                             : (index == 3 ? 46 : (index == 2 ? 35 : 40)),
                         right: 15,
-                        child: Image.asset(images[index])),
+                        child: Image.asset(info[index]['image'])),
                     Positioned(
                       left: 15,
                       top: 110,
@@ -67,7 +62,7 @@ class Products extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            labels[index][0],
+                            info[index]['label'],
                             style: TextStyle(
                                 fontWeight: FontWeight.w500, fontSize: 16),
                           ),
@@ -76,7 +71,7 @@ class Products extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Text(labels[index][1],
+                              Text(info[index]['price'],
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       color: Color(0xFF4E5A37),
