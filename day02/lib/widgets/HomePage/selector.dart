@@ -21,14 +21,7 @@ class _SelectorState extends State<Selector> {
     "assets/images/chairs.svg"
   ];
 
-  List titles = [
-    "Popular",
-    "Chairs",
-    "Tables",
-    "Sofas",
-    "Beds",
-    "Lamps"
-  ];
+  List titles = ["Popular", "Chairs", "Tables", "Sofas", "Beds", "Lamps"];
 
   List<Color> color = [
     Palette.secondary,
@@ -43,7 +36,7 @@ class _SelectorState extends State<Selector> {
     return Container(
       height: 85,
       child: ListView.builder(
-        padding: EdgeInsets.only(left: 20),
+          padding: EdgeInsets.only(left: 20),
           scrollDirection: Axis.horizontal,
           itemCount: selectorImage.length,
           itemBuilder: (BuildContext context, int index) {
@@ -58,29 +51,31 @@ class _SelectorState extends State<Selector> {
                       });
                     },
                     child: Container(
-                      padding:  EdgeInsets.all(
-                        
-                        index!=0?13:16.9
-                        ),
+                      padding: EdgeInsets.all(index != 0 ? 13 : 16.9),
                       child: SvgPicture.asset(
                         selectorImage[index],
-                        color: selected==index?Colors.white:Palette.grey,
+                        color: selected == index ? Colors.white : Palette.grey,
                       ),
                       width: 55,
                       decoration: BoxDecoration(
-                          color: selected == index?Palette.primary:Palette.secondary,
+                          color: selected == index
+                              ? Palette.primary
+                              : Palette.secondary,
                           // color[index],
                           borderRadius: BorderRadius.circular(13)),
                     ),
                   ),
-
-                  SizedBox(height: 7,),
-
-                  Text(titles[index], style: TextStyle(fontWeight: 
-                  selected==index?
-                  FontWeight.w500:FontWeight.w400,
-                  color:selected==index?
-                  Palette.primary:Palette.grey, ),),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Text(
+                    titles[index],
+                    style: TextStyle(
+                      fontWeight:
+                          selected == index ? FontWeight.w500 : FontWeight.w400,
+                      color: selected == index ? Palette.primary : Palette.grey,
+                    ),
+                  ),
                 ],
               ),
             );

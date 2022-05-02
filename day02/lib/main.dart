@@ -10,10 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'ClashDisplay',
-        primarySwatch: Colors.grey
-      ),
+      theme: ThemeData(fontFamily: 'ClashDisplay', primarySwatch: Colors.grey),
       home: const HomePage(),
     );
   }

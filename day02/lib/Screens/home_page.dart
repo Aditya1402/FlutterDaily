@@ -22,37 +22,36 @@ class HomePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: 
-        [
+        actions: [
           Padding(
             padding: EdgeInsets.only(top: 25, right: 20),
-            child: InkWell(child: 
-            SvgPicture.asset("assets/images/cart.svg", width: 28, color: Palette.primary,)
-            
-              ),
+            child: InkWell(
+                child: SvgPicture.asset(
+              "assets/images/cart.svg",
+              width: 28,
+              color: Palette.primary,
+            )),
           )
         ],
-        title:  const Padding(
-          padding: EdgeInsets.only(top: 25,left: 8),
-          child: Text("FurnitureCo.",
-          style: TextStyle(
-            color: Palette.primary,
-            fontWeight: FontWeight.w600
-          ),),
+        title: const Padding(
+          padding: EdgeInsets.only(top: 25, left: 8),
+          child: Text(
+            "FurnitureCo.",
+            style:
+                TextStyle(color: Palette.primary, fontWeight: FontWeight.w600),
+          ),
         ),
       ),
-
-      body:  Column(
-        children:   [
+      body: Column(
+        children: [
           Padding(
             padding: EdgeInsets.all(20),
             child: SearchBar(),
           ),
-      
-          SizedBox(height: 5,),
-      
+          SizedBox(
+            height: 5,
+          ),
           Selector(),
-      
           Products()
         ],
       ),

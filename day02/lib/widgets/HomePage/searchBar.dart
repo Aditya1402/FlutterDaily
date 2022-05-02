@@ -9,9 +9,7 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: 
-      [
+    return Stack(children: [
       TextField(
         cursorColor: Palette.primary,
         textAlign: TextAlign.left,
@@ -28,35 +26,32 @@ class SearchBar extends StatelessWidget {
             filled: true,
             fillColor: Palette.secondary,
             hintText: "Search for furniture",
-            prefixIcon:   const Padding(
+            prefixIcon: const Padding(
               padding: EdgeInsets.only(left: 16, right: 25),
               child: Icon(
                 MyFlutterApp.search,
                 size: 25,
                 color: Palette.grey,
               ),
-            )
-            ),
+            )),
       ),
-
       Align(
         alignment: Alignment.centerRight,
         child: GestureDetector(
           onTap: null,
-          child: Container
-          (
-            padding: const EdgeInsets.all(18),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              color: Palette.primary
-            ),
-            width: 63,
-            height: 63,
-            child: SvgPicture.asset("assets/images/settings.svg",color: Colors.white,)
-          ),
+          child: Container(
+              padding: const EdgeInsets.all(18),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: Palette.primary),
+              width: 63,
+              height: 63,
+              child: SvgPicture.asset(
+                "assets/images/settings.svg",
+                color: Colors.white,
+              )),
         ),
       )
-      ]
-    );
-  } 
+    ]);
+  }
 }

@@ -81,18 +81,21 @@ class Products extends StatelessWidget {
                                       fontWeight: FontWeight.w600,
                                       color: Color(0xFF4E5A37),
                                       fontSize: 19)),
-
-
                               Container(
                                 margin: EdgeInsets.only(left: 55),
                                 height: 28,
                                 width: 30,
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Palette.secondary,width: 1.5),
+                                  border: Border.all(
+                                      color: Palette.secondary, width: 1.5),
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(7),
                                 ),
-                                child: Center(child: Icon(FontAwesomeIcons.arrowRight,size: 13,)),
+                                child: Center(
+                                    child: Icon(
+                                  FontAwesomeIcons.arrowRight,
+                                  size: 13,
+                                )),
                               )
                             ],
                           )
