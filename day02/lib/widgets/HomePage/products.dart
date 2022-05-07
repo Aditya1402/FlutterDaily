@@ -8,14 +8,28 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../Screens/productPage.dart';
 
 class Products extends StatelessWidget {
-  List<Map> info = 
-  [
-    {'image':"assets/images/sofa1.png",'label':"Royal Palm Sofa",'price':"\$50.18"},
-    {'image':"assets/images/sofa2.png",'label':"Leatherette Sofa",'price':"\$30.99"},
-    {'image':"assets/images/sofa3.png",'label':"Modern Sofa",'price':"\$45.99"},
-    {'image':"assets/images/sofa4.png",'label':"Leatherette Sofa",'price':"\$20.99"},
+  List<Map> info = [
+    {
+      'image': "assets/images/sofa1.png",
+      'label': "Royal Palm Sofa",
+      'price': "\$50.18"
+    },
+    {
+      'image': "assets/images/sofa2.png",
+      'label': "Leatherette Sofa",
+      'price': "\$30.99"
+    },
+    {
+      'image': "assets/images/sofa3.png",
+      'label': "Modern Sofa",
+      'price': "\$45.99"
+    },
+    {
+      'image': "assets/images/sofa4.png",
+      'label': "Leatherette Sofa",
+      'price': "\$20.99"
+    },
   ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +45,8 @@ class Products extends StatelessWidget {
           itemCount: 4,
           itemBuilder: (BuildContext ctx, index) {
             return GestureDetector(
-              onTap: ()=>Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context)=>ProductPage())),
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProductPage())),
               child: Container(
                   clipBehavior: Clip.none,
                   alignment: Alignment.center,

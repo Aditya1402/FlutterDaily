@@ -86,16 +86,16 @@ class _ProductPageState extends State<ProductPage> {
                               child: Picker(const Color(0XFF133840))),
                           const SizedBox(height: 24),
                           GestureDetector(
-                            onTap: (() => setState(() {
+                              onTap: (() => setState(() {
                                     setColor = colors[1];
                                   })),
-                            child: Picker(const Color(0XFFB4916C))),
+                              child: Picker(const Color(0XFFB4916C))),
                           const SizedBox(height: 24),
                           GestureDetector(
-                            onTap: (() => setState(() {
+                              onTap: (() => setState(() {
                                     setColor = colors[2];
                                   })),
-                            child: Picker(const Color(0XFFE4CBAD))),
+                              child: Picker(const Color(0XFFE4CBAD))),
                         ],
                       ),
                     ),

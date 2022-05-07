@@ -13,16 +13,14 @@ class Selector extends StatefulWidget {
 class _SelectorState extends State<Selector> {
   int selected = 0;
 
-  List<Map> selector = 
-  [
-    {'image':"assets/images/popular.svg",'title':"Popular"},
-    {'image':"assets/images/chairs.svg",'title':"Chairs"},
-    {'image':"assets/images/tables.svg",'title':"Tables"},
-    {'image':"assets/images/sofa.svg",'title':"Sofas"},
-    {'image':"assets/images/beds.svg",'title':"Beds"},
-    {'image':"assets/images/chairs.svg",'title':"Lamps"},
+  List<Map> selector = [
+    {'image': "assets/images/popular.svg", 'title': "Popular"},
+    {'image': "assets/images/chairs.svg", 'title': "Chairs"},
+    {'image': "assets/images/tables.svg", 'title': "Tables"},
+    {'image': "assets/images/sofa.svg", 'title': "Sofas"},
+    {'image': "assets/images/beds.svg", 'title': "Beds"},
+    {'image': "assets/images/chairs.svg", 'title': "Lamps"},
   ];
-
 
   List<Color> color = [
     Palette.secondary,
