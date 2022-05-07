@@ -5,6 +5,7 @@ import 'package:day02/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../Screens/productPage.dart';
 
 class Products extends StatelessWidget {
   List<Map> info = 
@@ -29,76 +30,81 @@ class Products extends StatelessWidget {
               mainAxisSpacing: 20),
           itemCount: 4,
           itemBuilder: (BuildContext ctx, index) {
-            return Container(
-                clipBehavior: Clip.none,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset.fromDirection(-2, -7.5),
-                          color: Color.fromARGB(255, 239, 239, 239),
-                          spreadRadius: 0.15,
-                          blurRadius: 18)
+            return GestureDetector(
+              onTap: ()=>Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context)=>ProductPage())),
+              child: Container(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            offset: Offset.fromDirection(-2, -7.5),
+                            color: Color.fromARGB(255, 239, 239, 239),
+                            spreadRadius: 0.15,
+                            blurRadius: 18)
+                      ],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Stack(
+                    overflow: Overflow.visible,
+                    alignment: Alignment.topCenter,
+                    children: [
+                      Blur(
+                          blur: 12,
+                          child: SvgPicture.asset("assets/images/shadow.svg")),
+                      Positioned(
+                          bottom: index == 1
+                              ? 53
+                              : (index == 3 ? 46 : (index == 2 ? 35 : 40)),
+                          right: 15,
+                          child: Image.asset(info[index]['image'])),
+                      Positioned(
+                        left: 15,
+                        top: 110,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              info[index]['label'],
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500, fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: [
+                                Text(info[index]['price'],
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        color: Palette.navyGreen,
+                                        fontSize: 19)),
+                                Container(
+                                  margin: EdgeInsets.only(left: 55),
+                                  height: 28,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Palette.secondary, width: 1.5),
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(7),
+                                  ),
+                                  child: Center(
+                                      child: Icon(
+                                    FontAwesomeIcons.arrowRight,
+                                    size: 13,
+                                  )),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
                     ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
-                child: Stack(
-                  overflow: Overflow.visible,
-                  alignment: Alignment.topCenter,
-                  children: [
-                    Blur(
-                        blur: 12,
-                        child: SvgPicture.asset("assets/images/shadow.svg")),
-                    Positioned(
-                        bottom: index == 1
-                            ? 53
-                            : (index == 3 ? 46 : (index == 2 ? 35 : 40)),
-                        right: 15,
-                        child: Image.asset(info[index]['image'])),
-                    Positioned(
-                      left: 15,
-                      top: 110,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            info[index]['label'],
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 16),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Row(
-                            children: [
-                              Text(info[index]['price'],
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xFF4E5A37),
-                                      fontSize: 19)),
-                              Container(
-                                margin: EdgeInsets.only(left: 55),
-                                height: 28,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Palette.secondary, width: 1.5),
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(7),
-                                ),
-                                child: Center(
-                                    child: Icon(
-                                  FontAwesomeIcons.arrowRight,
-                                  size: 13,
-                                )),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ));
+                  )),
+            );
           }),
     );
   }
