@@ -1,4 +1,5 @@
 import 'package:day02/palette.dart';
+import 'package:day02/widgets/ProductPage/counter_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -12,28 +13,13 @@ class Counter extends StatefulWidget {
 }
 
 class _CounterState extends State<Counter> {
+  
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        GestureDetector(
-          onTap: (() => setState(() {
-                number++;
-              })),
-          child: Container(
-            width: 37,
-            height: 37,
-            child: const Icon(
-              FontAwesomeIcons.plus,
-              color: Palette.primary,
-              size: 20,
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.grey[200]),
-          ),
-        ),
+        CounterButton(FontAwesomeIcons.plus),
         const SizedBox(width: 10),
         Center(
           child: SizedBox(
@@ -49,23 +35,7 @@ class _CounterState extends State<Counter> {
             ),
           ),
         ),
-        GestureDetector(
-          onTap: () => setState(() {
-            number--;
-          }),
-          child: Container(
-            width: 37,
-            height: 37,
-            child: const Icon(
-              FontAwesomeIcons.minus,
-              color: Palette.primary,
-              size: 20,
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.grey[200]),
-          ),
-        )
+        CounterButton(FontAwesomeIcons.minus),
       ],
     );
   }
