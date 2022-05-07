@@ -13,13 +13,16 @@ class Counter extends StatefulWidget {
 }
 
 class _CounterState extends State<Counter> {
-  
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        CounterButton(FontAwesomeIcons.plus),
+        GestureDetector(
+            onTap: () => setState(() {
+                  number++;
+                }),
+            child: CounterButton(FontAwesomeIcons.plus)),
         const SizedBox(width: 10),
         Center(
           child: SizedBox(
@@ -35,7 +38,11 @@ class _CounterState extends State<Counter> {
             ),
           ),
         ),
-        CounterButton(FontAwesomeIcons.minus),
+        GestureDetector(
+            onTap: () => setState(() {
+                  number--;
+                }),
+            child: CounterButton(FontAwesomeIcons.minus)),
       ],
     );
   }
