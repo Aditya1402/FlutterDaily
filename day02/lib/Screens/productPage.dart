@@ -1,3 +1,4 @@
+import 'package:day02/Screens/home_page.dart';
 import 'package:day02/palette.dart';
 import 'package:day02/widgets/ProductPage/counter.dart';
 import 'package:flutter/material.dart';
@@ -5,8 +6,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ProductPage extends StatelessWidget {
+import '../widgets/ProductPage/color_picker.dart';
+
+List<Color> colors = const [
+  Color(0XFF133840),
+  Color(0XFFB4916C),
+  Color(0XFFE4CBAD),
+];
+
+class ProductPage extends StatefulWidget {
+  @override
+  State<ProductPage> createState() => _ProductPageState();
+}
+
+class _ProductPageState extends State<ProductPage> {
   late BuildContext scaffoldContext;
+
+  Color setColor = colors[1];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Builder(
@@ -20,21 +37,94 @@ class ProductPage extends StatelessWidget {
               child: Stack(
                 children: [
                   Positioned(
-                    left: 85,
-                    bottom: 210,
+                    left: 70,
+                    bottom: 25,
                     child: Container(
-                      height: 500,
+                      height: 600,
                       width: 900,
                       decoration: BoxDecoration(
                           border:
-                              Border.all(color: Palette.secondary, width: 2),
-                          borderRadius: BorderRadius.circular(20)),
+                              Border.all(color: Palette.secondary, width: 1.5),
+                          borderRadius: BorderRadius.circular(28)),
                     ),
                   ),
-                  Image.asset(
-                    "assets/images/product.png",
-                    width: 800,
-                  )
+                  Positioned(
+                    left: 35,
+                    child: ColorFiltered(
+                      colorFilter:
+                          ColorFilter.mode(setColor, BlendMode.modulate),
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/product.png",
+                          width: 490,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 20,
+                    top: 160,
+                    child: Container(
+                      height: 200,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Palette.secondary,
+                                spreadRadius: 1.5,
+                                blurRadius: 8)
+                          ],
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                              onTap: (() => setState(() {
+                                    setColor = colors[0];
+                                  })),
+                              child: Picker(const Color(0XFF133840))),
+                          const SizedBox(height: 24),
+                          GestureDetector(
+                            onTap: (() => setState(() {
+                                    setColor = colors[1];
+                                  })),
+                            child: Picker(const Color(0XFFB4916C))),
+                          const SizedBox(height: 24),
+                          GestureDetector(
+                            onTap: (() => setState(() {
+                                    setColor = colors[2];
+                                  })),
+                            child: Picker(const Color(0XFFE4CBAD))),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 20,
+                    top: 40,
+                    child: GestureDetector(
+                      onTap: (() => Navigator.pop(context)),
+                      child: Container(
+                        height: 45,
+                        width: 45,
+                        decoration: BoxDecoration(
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Palette.secondary,
+                                  spreadRadius: 1,
+                                  blurRadius: 5)
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8)),
+                        child: const Icon(
+                          FontAwesomeIcons.arrowLeft,
+                          color: Palette.primary,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -124,7 +214,7 @@ class ProductPage extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () => ScaffoldMessenger.of(scaffoldContext)
                           .showSnackBar(SnackBar(
-                            duration: const Duration(seconds: 2),
+                        duration: const Duration(seconds: 2),
                         backgroundColor: Palette.navyGreen,
                         content: Text(
                           number > 1
