@@ -1,4 +1,4 @@
-# Day 01 - Basic UI Implementation
+# MP01 - Basic UI Implementation
 
 ### Replicated UI Components 
 
