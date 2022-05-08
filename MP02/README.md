@@ -1,4 +1,4 @@
-# Day 02 - Basic UI Implementation
+# MP02 - Basic UI Implementation
 
 ### Replicated UI Components 
 
@@ -7,6 +7,7 @@
 **Packages Used :**
 - flutter_svg
 - font_awesome_flutter
+- blur
 
 **Fonts Used :** *Clash Display*
 
